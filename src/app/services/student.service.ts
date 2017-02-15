@@ -68,4 +68,19 @@ addStudentInStudentList(object){
     return Promise.resolve(LIST.length);
   };
   
+  // Création d'une fonction pour mettre à jour un item du tableau LIST
+  editStudentList(){
+    // Créer une variable pour l'item à modifier
+    let selectedStudent = LIST[0];
+
+    // Modifier le firstName, le lastName de l'item selectionné
+    selectedStudent.firstName = 'Nadia';
+    selectedStudent.lastName = 'Poi';
+    selectedStudent.state = 0;
+  }
+
+  // Création d'une fonction pour récuperer les informations d'un étudiant
+  getSelectedStudentInfo(id): Promise<any>{
+    return Promise.resolve(LIST[id]);
+  }
 };
